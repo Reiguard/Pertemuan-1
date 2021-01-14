@@ -9,6 +9,13 @@ struct Node{
     Node *next;
 }*head1, *tail1, *head2, *tail2;
 
+
+Node *createNode (int num) {
+    Node *newNode = (Node*)malloc(sizeof(Node));
+    newNode->num = num;
+    newNode->next = NULL;
+    return newNode;
+}
 void pushHead1(int num){
     Node *temp1 = createNode(num); 
 
@@ -18,12 +25,6 @@ void pushHead1(int num){
         temp1->next = head1;
         head1 = temp1;
     }
-}
-Node *createNode (int num) {
-    Node *newNode = (Node*)malloc(sizeof(Node));
-    newNode->num = num;
-    newNode->next = NULL;
-    return newNode;
 }
 
 void pushTail1(int num){
